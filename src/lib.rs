@@ -286,6 +286,12 @@ cfg_if! {
     }
 }
 
+// turns out a Switch is close enough to our seL4 environment?
+mod switch;
+pub use switch::*;
+
+
+/*
 cfg_if! {
     if #[cfg(windows)] {
         mod windows;
@@ -312,3 +318,4 @@ cfg_if! {
         // Unknown target_family
     }
 }
+*/
